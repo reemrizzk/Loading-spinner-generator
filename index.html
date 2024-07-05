@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/simplesyntax-js@latest/dist/simplesyntax.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Loader</title>
+        <style id="styles">
+        </style>
+    </head>
+    <body>
+        <div class="column">
+            <h1>Custom loading spinner</h1>
+            <div class="form-group">
+                <label for="spinnerSize">Size</label>
+                    <input type="range" id="spinnerSize" value="1" min="0.2" max="1.5" step="0.1" onchange="updateSpinnerSize(this.value)">
+            </div>
+            <div class="form-group">
+                <label for="spinnerSpeed">Speed</label>
+                    <input type="range" id="spinnerSpeed" value="0.1" min="0.01" max="0.17" step="0.01" onchange="updateSpinnerSpeed(this.value)">
+            </div>
+            <div class="form-group">
+                <label for="barWidth">Bar width</label>
+                <input type="range" id="barWidth" value="6" min="2" max="10" step="1" onchange="updateBarWidth(this.value)">
+            </div>
+            <div class="form-group">
+                <label for="barHeight">Bar height</label>
+                <input type="range" id="barHeight" value="16" min="2" max="30" step="1" onchange="updateBarHeight(this.value)">
+            </div>
+            <div class="form-group">
+                <label for="barBorderRadius">Bar border radius</label>
+                <input type="range" id="barBorderRadius" value="30" min="0" max="50" step="10" onchange="updateBarBorderRadius(this.value)">
+            </div>
+            <div class="form-group">
+                <label for="barBackgroundColor">Bar color</label>
+                <input type="color" id="barBackgroundColor" value="#444444" onchange="updateBarBackgroundColor(this.value)">
+            </div>
+        </div>
+        <div class="column">
+            <div style="height: 100px;">
+                <div class="loading-spinner-container">
+                    <div class="loading-spinner">                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+            </div>
+            <div id="outputs">
+                <h2>HTML code</h2>
+                <div><textarea id="html-output">
+<div class="loading-spinner-container">
+    <div class="loading-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div> 
+    </div>
+</div>
+                </textarea></div>
+                <h2>CSS code</h2>
+                <div><textarea id="css-output"></textarea></div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/simplesyntax-js@latest/dist/simplesyntax.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #e8f8ff, #f8ddff);
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex-basis: 100%;
+    }
+}
+
+#outputs {
+    margin-top: 40px;
+}
+
+textarea {
+    display:  block;
+    height: 140px;
+}
+
+h1, h2, label {
+    font-family: "Open Sans",sans-serif;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
